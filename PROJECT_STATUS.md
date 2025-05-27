@@ -371,6 +371,54 @@ code .                         # Open in VS Code (if available)
 
 ---
 
-CC-01 Project Status & Development Continuation Guide
+## Current Issues & Troubleshooting
+
+### ACTIVE CRITICAL ISSUE: Tailwind CSS v4 Configuration Conflicts
+
+**Problem Summary:**
+- Project designed for Tailwind CSS v4.0.0 (as per GitHub repo)
+- Experiencing version conflicts and PostCSS configuration issues
+- `npm list tailwindcss` shows: `tailwindcss@4.1.7 invalid: "^4.0.0"`
+- PostCSS error: Need to install `@tailwindcss/postcss` for v4
+
+**Current Configuration Status:**
+```json
+// apps/web/package.json - devDependencies
+"tailwindcss": "^4.0.0",
+"postcss": "^8.4.0", 
+"autoprefixer": "^10.4.0"
+```
+
+```javascript
+// apps/web/postcss.config.js - UPDATED for v4
+module.exports = {
+  plugins: {
+    '@tailwindcss/postcss': {},
+    autoprefixer: {},
+  },
+}
+```
+
+**Packages Installed:**
+- ✅ `@tailwindcss/postcss` - Added for v4 compatibility
+- ❌ Still getting version conflicts in npm
+
+**Error Messages Encountered:**
+1. `Error: It looks like you're trying to use 'tailwindcss' directly as a PostCSS plugin`
+2. `npm error invalid: tailwindcss@4.1.7` 
+3. CSS compilation failures
+
+### Next Steps Required
+1. **Verify actual Tailwind version installed**: Check `node_modules/tailwindcss/package.json`
+2. **Clean dependency resolution**: May need to force reinstall with correct version
+3. **Test CSS compilation**: Ensure globals.css processes correctly
+4. **Verify Hero section styling** once Tailwind is working
+
+### Recent Solutions Applied
+- ✅ Fixed TypeScript configuration conflicts
+- ✅ Resolved Next.js 15 compatibility issues  
+- ✅ Updated React 19 integration
+- ✅ Corrected import path issues
+- 🔄 **IN PROGRESS**: Tailwind CSS v4 configurationCC-01 Project Status & Development Continuation Guide
 
 *This document should be saved as `PROJECT_STATUS.md` in the repository root for easy reference.*
