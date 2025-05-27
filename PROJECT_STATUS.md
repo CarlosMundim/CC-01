@@ -371,4 +371,6 @@ code .                         # Open in VS Code (if available)
 
 ---
 
+CC-01 Project Status & Development Continuation Guide
+
 *This document should be saved as `PROJECT_STATUS.md` in the repository root for easy reference.*
