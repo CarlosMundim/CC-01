@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --rolls-bordeaux: #680021;
+    --rolls-spice: #FFFAEC;
+    --rolls-gray: #939598;
+    --rolls-black: #000000;
+    --dark-navy: #001f3f;
+    --luxury-teal: #008B8B;
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .luxury-gradient {
+    background: linear-gradient(135deg, var(--dark-navy) 0%, var(--rolls-bordeaux) 100%);
+  }
+  
+  .glass-effect {
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}

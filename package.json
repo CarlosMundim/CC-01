@@ -1,0 +1,28 @@
+{
+  "name": "cc-01",
+  "version": "1.0.0",  
+  "description": "Revolutionary AI-driven workforce mobility platform with Tomoo AI concierge",
+  "private": true,
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build", 
+    "test": "turbo run test",
+    "lint": "turbo run lint"
+  },
+  "devDependencies": {
+    "turbo": "^1.13.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "bun": ">=1.1.0"
+  },
+  "repository": {
+    "type": "git", 
+    "url": "https://github.com/CarlosMundim/CC-01.git"
+  },
+  "author": "Carlos Mundim",
+  "license": "MIT"
+}
