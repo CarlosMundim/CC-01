@@ -16,7 +16,7 @@ export default {
         "luxury-teal": "#008B8B",
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
+        sans: ["system-ui", "sans-serif"],
         display: ["Playfair Display", "serif"],
       },
       animation: {
