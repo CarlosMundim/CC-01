@@ -24,5 +24,6 @@
     "url": "https://github.com/CarlosMundim/CC-01.git"
   },
   "author": "Carlos Mundim",
-  "license": "MIT"
+  "license": "MIT",
+  "packageManager": "bun@1.2.14"
 }
